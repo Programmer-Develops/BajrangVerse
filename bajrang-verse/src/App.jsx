@@ -9,7 +9,7 @@ function App() {
     <>
       <div>
         <a href="" target="_blank">
-          <img src={BajrangV} className="logo" alt="BV logo" />
+          <img src={BajrangV} className="logo" alt="Bajrang Verse logo" />
         </a>
       </div>
       <h1>Vite + React</h1>
