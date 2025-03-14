@@ -5,11 +5,15 @@
   text-align: center;
 }
 
+.logo-div {
+  display:flex;
+}
+
 .logo {
   height: 16em;
   padding: 1.5em;
   will-change: filter;
-  transition: filter 300ms;
+  transition: filter 1000ms;
 }
 .logo:hover {
   filter: drop-shadow(0 0 2em #ffc464aa);

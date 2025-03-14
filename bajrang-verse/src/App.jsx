@@ -7,7 +7,7 @@ function App() {
 
   return (
     <>
-      <div>
+      <div className="logo-div">
         <a href="" target="_blank">
           <img src={BajrangV} className="logo" alt="Bajrang Verse logo" />
         </a>
