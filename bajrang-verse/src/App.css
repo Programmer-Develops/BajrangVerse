@@ -50,3 +50,23 @@
 .read-the-docs {
   color: #888;
 }
+
+.chat-box {
+  display: flex;
+  flex-direction: column;
+  gap: 8;
+  border-radius: 8px;  
+  border: solid #ccc;
+  padding: 16;
+  min-height: 400px;
+  min-width: 900px ;
+  overflow-y: auto;
+  justify-content: flex-end;
+  /* backgroundColor: '#1E1E1E'; */
+}
+
+.chat-input {
+  flex-direction: 'row';
+  align-items: 'center';
+  margin-Bottom: 8;
+}
