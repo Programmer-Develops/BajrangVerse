@@ -50,7 +50,7 @@ function App() {
       console.error('Error calling OpenAI API:', error);
       setMessages(prev => [...prev, { 
         role: 'assistant', 
-        content: 'Sorry, I encountered an error. Please try again.' 
+        content: 'I am not available right now due to undergoing development. Please try again later.' 
       }]);
     } finally {
       setIsLoading(false);
