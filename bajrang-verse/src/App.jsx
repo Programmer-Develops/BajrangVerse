@@ -2,6 +2,8 @@ import { useState, useRef, useEffect } from 'react';
 import BajrangV from './assets/Bajrang-Verse-logo.svg';
 import './App.css';
 
+// *TODO: Replace YOUR_OPENAI_API_KEY with my actual API key
+
 function App() {
   const [messages, setMessages] = useState([
     { role: 'assistant', content: 'Hi! I am Bajrang, your personal assistant. How can I help you today?' }
