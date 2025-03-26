@@ -16,6 +16,12 @@ function App() {
   const [isLoading, setIsLoading] = useState('');
   const messageRef = useRef(null);
   
+  const scrollToBottom = () => {
+    messageRef.current?.scrollIntoView({
+      behavior:"smooth"
+    })
+  }
+  
   // const [messages, setMessages] = useState([
   //   { role: 'assistant', content: 'Hi! I am Bajrang, your personal assistant. How can I help you today?' }
   // ]);
