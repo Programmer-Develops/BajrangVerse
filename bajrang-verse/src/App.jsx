@@ -11,7 +11,8 @@ function App() {
       content:'Hi I am Bajrang, your personal assistant. How can I help you today?'
     }
   ]);
-  const [inputValue,,setInputValue] = useState('')
+  const [inputValue,setInputValue] = useState('');
+  const [isLoading, setIsLoading] = useState('');
   // const [messages, setMessages] = useState([
   //   { role: 'assistant', content: 'Hi! I am Bajrang, your personal assistant. How can I help you today?' }
   // ]);
