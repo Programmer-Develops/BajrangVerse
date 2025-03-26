@@ -85,6 +85,7 @@
 
 .chat-input button {
   padding: 8px 16px;
+  transition: 500ms;
   background-color: #ffae00;
   color: white;
   border: none;
