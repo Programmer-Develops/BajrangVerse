@@ -11,8 +11,11 @@ function App() {
       content:'Hi I am Bajrang, your personal assistant. How can I help you today?'
     }
   ]);
+
   const [inputValue,setInputValue] = useState('');
   const [isLoading, setIsLoading] = useState('');
+  const messageRef = useRef(null);
+  
   // const [messages, setMessages] = useState([
   //   { role: 'assistant', content: 'Hi! I am Bajrang, your personal assistant. How can I help you today?' }
   // ]);
