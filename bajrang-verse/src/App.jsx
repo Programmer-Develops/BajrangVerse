@@ -5,64 +5,71 @@ import './App.css';
 // *TODO: Replace YOUR_OPENAI_API_KEY with my actual API key
 
 function App() {
-  const [messages, setMessages] = useState([
-    { role: 'assistant', content: 'Hi! I am Bajrang, your personal assistant. How can I help you today?' }
+  const [messages,setMessages] = useState([
+    {
+      role: 'assistant',
+      content:'Hi I am Bajrang, your personal assistant. How can I help you today?'
+    }
   ]);
-  const [inputValue, setInputValue] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
-  const messagesEndRef = useRef(null);
+  const [inputValue,,setInputValue] = useState('')
+  // const [messages, setMessages] = useState([
+  //   { role: 'assistant', content: 'Hi! I am Bajrang, your personal assistant. How can I help you today?' }
+  // ]);
+  // const [inputValue, setInputValue] = useState('');
+  // const [isLoading, setIsLoading] = useState(false);
+  // const messagesEndRef = useRef(null);
 
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
+  // const scrollToBottom = () => {
+  //   messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  // };
 
-  useEffect(() => {
-    scrollToBottom();
-  }, [messages]);
+  // useEffect(() => {
+  //   scrollToBottom();
+  // }, [messages]);
 
-  const handleSendMessage = async () => {
-    if (!inputValue.trim()) return;
+  // const handleSendMessage = async () => {
+  //   if (!inputValue.trim()) return;
 
-    const userMessage = { role: 'user', content: inputValue };
-    setMessages(prev => [...prev, userMessage]);
-    setInputValue('');
-    setIsLoading(true);
+  //   const userMessage = { role: 'user', content: inputValue };
+  //   setMessages(prev => [...prev, userMessage]);
+  //   setInputValue('');
+  //   setIsLoading(true);
 
-    try {
-      // Replace with your actual API call
-      const response = await fetch('https://api.openai.com/v1/chat/completions', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer YOUR_OPENAI_API_KEY`
-        },
-        body: JSON.stringify({
-          model: "gpt-3.5-turbo",
-          messages: [...messages, userMessage],
-          temperature: 0.7
-        })
-      });
+  //   try {
+  //     // Replace with your actual API call
+  //     const response = await fetch('https://api.openai.com/v1/chat/completions', {
+  //       method: 'POST',
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //         'Authorization': `Bearer YOUR_OPENAI_API_KEY`
+  //       },
+  //       body: JSON.stringify({
+  //         model: "gpt-3.5-turbo",
+  //         messages: [...messages, userMessage],
+  //         temperature: 0.7
+  //       })
+  //     });
 
-      const data = await response.json();
-      const assistantMessage = data.choices[0].message;
-      setMessages(prev => [...prev, assistantMessage]);
-    } catch (error) {
-      console.error('Error calling OpenAI API:', error);
-      setMessages(prev => [...prev, { 
-        role: 'assistant', 
-        content: 'I am not available right now due to undergoing development. Please try again later.' 
-      }]);
-    } finally {
-      setIsLoading(false);
-    }
-  };
+  //     const data = await response.json();
+  //     const assistantMessage = data.choices[0].message;
+  //     setMessages(prev => [...prev, assistantMessage]);
+  //   } catch (error) {
+  //     console.error('Error calling OpenAI API:', error);
+  //     setMessages(prev => [...prev, { 
+  //       role: 'assistant', 
+  //       content: 'I am not available right now due to undergoing development. Please try again later.' 
+  //     }]);
+  //   } finally {
+  //     setIsLoading(false);
+  //   }
+  // };
 
-  const handleKeyPress = (e) => {
-    if (e.key === 'Enter' && !e.shiftKey) {
-      e.preventDefault();
-      handleSendMessage();
-    }
-  };
+  // const handleKeyPress = (e) => {
+  //   if (e.key === 'Enter' && !e.shiftKey) {
+  //     e.preventDefault();
+  //     handleSendMessage();
+  //   }
+  // };
 
   return (
     <div className="container">
