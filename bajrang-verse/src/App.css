@@ -37,7 +37,7 @@
   min-width: 500px;
   max-width: 600px;
   background-color: #000000;
-  filter: drop-shadow(0 0 1em #ffc464aa);
+  filter: drop-shadow(0 0 1em #ffc46482);
 }
 
 .chat-area {
