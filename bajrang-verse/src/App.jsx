@@ -21,7 +21,21 @@ function App() {
       behavior:"smooth"
     })
   }
-  
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages]);
+
+  const handleSendMessage = async () => {
+    if(!inputValue.trim()) return;
+
+    const userMessage = {
+      role:'user',
+      content: inputValue
+    }
+    setMessages(prev => [...prev, userMessage])
+    
+  }
   // const [messages, setMessages] = useState([
   //   { role: 'assistant', content: 'Hi! I am Bajrang, your personal assistant. How can I help you today?' }
   // ]);
