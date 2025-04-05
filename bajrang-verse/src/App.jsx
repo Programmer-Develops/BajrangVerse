@@ -71,7 +71,12 @@ function App() {
           <img src={BajrangV} className="logo" alt="Bajrang Verse logo" />
         </a>       
       </div>
-      
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="2" y="5" width="15" height="14" rx="2" ry="2" fill="#ff9100" opacity="0.9"/>
+        <path d="M17 8L22 5V19L17 16V8Z" fill="#ffaf40"/>
+        <rect x="2" y="5" width="15" height="14" rx="2" ry="2" stroke="#ffd080" stroke-width="1.5"/>
+      </svg>
+
       <div className="chat-box">
         <div className="chat-area">
           {messages.map((message, index) => (
